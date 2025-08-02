@@ -10,7 +10,7 @@ const app=express()
 
 // middleware
 app.use(cors({
-  origin: 'http://localhost:5174',
+  origin: 'data-dashboard-goox3th76-bandikantichaitanyas-projects.vercel.app',
   credentials: true
 }));
 
@@ -31,6 +31,6 @@ mongoose.connect(process.env.MONGO_URL)
 
 
 // connect to a port
-app.listen('5000',()=>{
+app.listen(process.env.PORT,()=>{
     console.log('Server listening on port 5000')
 })

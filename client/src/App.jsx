@@ -11,7 +11,7 @@ function App() {
  let [data,setData]=useState([])
 
  const fetchCharts=()=>{
-  fetch('http://localhost:5000/api/allCharts')
+  fetch('https://data-dashboard-backend-jvtm.onrender.com/api/allCharts')
     .then(res=>res.json())
     .then(data=>setData(data.data))
     .catch(err=>console.log('Error occured',err))

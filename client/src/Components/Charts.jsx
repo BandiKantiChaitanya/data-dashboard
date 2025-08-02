@@ -21,7 +21,7 @@ function Charts({data}) {
         try {
             await Promise.all(
                 updateLayout.map((layoutItem)=>
-                fetch(`http://localhost:5000/api/updateChart/${layoutItem.i}`,{
+                fetch(`https://data-dashboard-backend-jvtm.onrender.com/api/updateChart/${layoutItem.i}`,{
                     method:'PUT',
                     headers:{
                         'Content-type':'application/JSON'

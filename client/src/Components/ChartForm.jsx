@@ -20,7 +20,7 @@ function ChartForm({onChartAdded}) {
 
     const onSubmit=async (formData)=>{
         try {
-            const Charts=await fetch('http://localhost:5000/api/allCharts')
+            const Charts=await fetch('https://data-dashboard-backend-jvtm.onrender.com/api/allCharts')
             const existingCharts=await Charts.json()
             const index=existingCharts.length
             const layout={
@@ -30,7 +30,7 @@ function ChartForm({onChartAdded}) {
                 h:3
             }
             const datawithLayout={...formData,layout}
-            const response=await fetch('http://localhost:5000/api/createChart',{
+            const response=await fetch('https://data-dashboard-backend-jvtm.onrender.com/api/createChart',{
                 method:'POST',
                 headers:{
                      'Content-type':'application/JSON',
