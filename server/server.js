@@ -11,7 +11,9 @@ const app=express()
 // middleware
 const allowedOrigins = [
   'https://data-dashboard-goox3th76-bandikantichaitanyas-projects.vercel.app',
-  'https://data-dashboard-kohl.vercel.app'
+  'https://data-dashboard-kohl.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:5174'
 ];
 app.use(cors({
   origin:  function(origin, callback){
