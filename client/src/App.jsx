@@ -33,7 +33,7 @@ function App() {
         <h3>Data Dashboard</h3>
 
      <div className='header2 ' >
-      <button onClick={handleModal} className='btn btn-warning' >Add Charts</button>
+      <button onClick={handleModal} className='btn btn-primary' >Add Charts</button>
       <ThemeSwitch className='toggle'/>
      </div>
       </div>
