@@ -19,9 +19,10 @@ function Charts({data}) {
 
     const handleLayout=async (updateLayout)=>{
         try {
+            const BASE_URL = import.meta.env.VITE_API_BASE_URL;
             await Promise.all(
                 updateLayout.map((layoutItem)=>
-                fetch(`https://data-dashboard-backend-jvtm.onrender.com/api/updateChart/${layoutItem.i}`,{
+                fetch(`${BASE_URL}/updateChart/${layoutItem.i}`,{
                     method:'PUT',
                     headers:{
                         'Content-type':'application/JSON'

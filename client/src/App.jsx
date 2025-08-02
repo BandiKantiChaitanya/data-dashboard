@@ -10,8 +10,10 @@ import {ToastContainer} from 'react-toastify'
 function App() {
  let [data,setData]=useState([])
 
+ const BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
  const fetchCharts=()=>{
-  fetch('https://data-dashboard-backend-jvtm.onrender.com/api/allCharts')
+  fetch(`${BASE_URL}/allCharts`)
     .then(res=>res.json())
     .then(data=>setData(data.data))
     .catch(err=>console.log('Error occured',err))
@@ -31,7 +33,7 @@ function App() {
         <h3>Data Dashboard</h3>
 
      <div className='header2 ' >
-      <button onClick={handleModal} className='btn btn-primary' >Add Charts</button>
+      <button onClick={handleModal} className='btn btn-warning' >Add Charts</button>
       <ThemeSwitch className='toggle'/>
      </div>
       </div>
