@@ -9,6 +9,10 @@ ChartJS.register(CategoryScale,LinearScale,BarElement,ArcElement,LineElement,Tit
 ChartJS.defaults.font.family = 'Mona Sans';
 function Charts({data}) {
 
+     if (!data || data.length === 0) {
+    return <div className='charts'><h1>Loading...</h1></div>;
+  }
+
     const layout = data.map((item) => ({
                     i: item._id,
                     x: item.layout?.x || 0,
